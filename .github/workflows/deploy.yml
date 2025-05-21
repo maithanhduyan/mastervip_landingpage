@@ -56,6 +56,11 @@ jobs:
             echo "Unable to determine package manager"
             exit 1
           fi
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: 8 # You can specify your desired pnpm version
+          run_install: false
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
@@ -80,8 +85,6 @@ jobs:
           # If source files changed but packages didn't, rebuild from a prior cache.
           restore-keys: |
             ${{ runner.os }}-nextjs-${{ hashFiles('**/pnpm-lock.yaml') }}-
-      - name: Install pnpm
-        run: npm install -g pnpm
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
       - name: Build with Next.js
