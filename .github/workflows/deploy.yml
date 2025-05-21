@@ -84,6 +84,11 @@ jobs:
         uses: actions/upload-pages-artifact@v3
         with:
           path: ./out
+      - name: Upload pnpm-lock.yaml
+        uses: actions/upload-artifact@v4
+        with:
+          name: pnpm-lock
+          path: pnpm-lock.yaml
 
   # Deployment job
   deploy:
@@ -93,6 +98,12 @@ jobs:
     runs-on: ubuntu-latest
     needs: build
     steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Download pnpm-lock.yaml
+        uses: actions/download-artifact@v4
+        with:
+          name: pnpm-lock
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
