@@ -1,0 +1,753 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MasterVIP | Access the Hidden Privileges</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;900&display=swap');
+        
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: #0a0a0a;
+            color: #e5e5e5;
+            scroll-behavior: smooth;
+        }
+        
+        .hero-bg {
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), 
+                        url('https://images.unsplash.com/photo-1514933651103-005eec06c04b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1974&q=80');
+            background-size: cover;
+            background-position: center;
+            min-height: 100vh;
+        }
+        
+        .gold-gradient {
+            background: linear-gradient(90deg, #d4af37 0%, #f9d423 50%, #d4af37 100%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+        
+        .card-hover {
+            transition: all 0.3s ease;
+        }
+        
+        .card-hover:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 25px 50px -12px rgba(217, 119, 6, 0.25);
+        }
+        
+        .section-divider {
+            height: 1px;
+            background: linear-gradient(90deg, transparent 0%, rgba(212, 175, 55, 0.5) 50%, transparent 100%);
+        }
+        
+        .vip-card {
+            background: linear-gradient(135deg, #1a1a1a 0%, #0d0d0d 100%);
+            border: 1px solid rgba(212, 175, 55, 0.3);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .vip-card::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(212, 175, 55, 0.1) 0%, transparent 70%);
+            transform: rotate(30deg);
+        }
+        
+        .glow-effect {
+            box-shadow: 0 0 15px rgba(212, 175, 55, 0.3);
+        }
+        
+        .glow-effect:hover {
+            box-shadow: 0 0 25px rgba(212, 175, 55, 0.5);
+        }
+        
+        .carousel-item {
+            min-height: 400px;
+            background-size: cover;
+            background-position: center;
+        }
+    </style>
+</head>
+<body class="antialiased">
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 bg-black bg-opacity-80 backdrop-blur-sm border-b border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16 items-center">
+                <div class="flex items-center">
+                    <span class="text-2xl font-bold gold-gradient">MasterVIP</span>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#about" class="text-gray-300 hover:text-white transition">About</a>
+                    <a href="#features" class="text-gray-300 hover:text-white transition">Features</a>
+                    <a href="#preview" class="text-gray-300 hover:text-white transition">Preview</a>
+                    <a href="#pilots" class="text-gray-300 hover:text-white transition">Pilots</a>
+                </div>
+                <div class="flex items-center space-x-4">
+                    <button class="px-4 py-2 text-sm font-medium text-white bg-transparent border border-yellow-600 rounded-md hover:bg-yellow-600 hover:bg-opacity-20 transition">
+                        Request Invite
+                    </button>
+                    <button class="md:hidden text-gray-300">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-bg flex items-center pt-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                <div class="space-y-8">
+                    <h1 class="text-4xl md:text-6xl font-bold leading-tight">
+                        <span class="gold-gradient">Access the Hidden</span><br>
+                        <span class="text-white">Privileges</span>
+                    </h1>
+                    <p class="text-xl text-gray-300">
+                        An exclusive gateway to decentralized VIP networks. Where elite clubs, secret societies, and high-tier events converge.
+                    </p>
+                    <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-6">
+                        <button class="px-8 py-4 text-lg font-bold text-black bg-gradient-to-r from-yellow-500 to-yellow-300 rounded-md hover:from-yellow-400 hover:to-yellow-200 transition transform hover:-translate-y-1">
+                            Become a Hunter
+                        </button>
+                        <button class="px-8 py-4 text-lg font-bold text-white bg-transparent border-2 border-yellow-600 rounded-md hover:bg-yellow-600 hover:bg-opacity-20 transition transform hover:-translate-y-1">
+                            Enter the High Table
+                        </button>
+                    </div>
+                </div>
+                <div class="relative">
+                    <div class="vip-card rounded-xl p-8 max-w-md mx-auto glow-effect">
+                        <div class="flex justify-between items-center mb-8">
+                            <span class="text-2xl font-bold gold-gradient">MasterVIP</span>
+                            <span class="text-xs text-gray-400">DIAMOND TIER</span>
+                        </div>
+                        <div class="h-40 mb-8 flex items-center">
+                            <div class="w-16 h-16 rounded-full bg-gradient-to-br from-yellow-600 to-yellow-300 flex items-center justify-center">
+                                <i class="fas fa-crown text-2xl text-black"></i>
+                            </div>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <div>
+                                <p class="text-xs text-gray-400">HOLDER ID</p>
+                                <p class="text-sm">0x8a...3f7d</p>
+                            </div>
+                            <div class="text-right">
+                                <p class="text-xs text-gray-400">ACCESS POINTS</p>
+                                <p class="text-sm">1,247</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="absolute -bottom-6 -right-6 w-24 h-24 bg-yellow-600 rounded-full opacity-20 blur-xl"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-5xl font-bold mb-4">
+                    <span class="gold-gradient">"Not everyone gets a seat at this table."</span>
+                </h2>
+                <div class="w-24 h-1 bg-yellow-600 mx-auto mt-6"></div>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <p class="text-lg text-gray-300 mb-6">
+                        MasterVIP is a global infrastructure for issuing and managing digital VIP privileges – no cards, no friction, no middlemen.
+                    </p>
+                    <p class="text-gray-400">
+                        From underground clubs in Tokyo to private lounges in Berlin, from speaker rooms at defense summits to secret startup salons in Lisbon — we connect private ecosystems in a secure and seamless layer.
+                    </p>
+                </div>
+                <div class="grid grid-cols-2 gap-4">
+                    <div class="bg-gray-900 rounded-lg p-6 card-hover">
+                        <div class="w-12 h-12 bg-yellow-600 bg-opacity-20 rounded-full flex items-center justify-center mb-4">
+                            <i class="fas fa-building text-yellow-500"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2">For Organizations</h3>
+                        <p class="text-gray-400 text-sm">Create private circles and manage VIP access with complete control.</p>
+                    </div>
+                    <div class="bg-gray-900 rounded-lg p-6 card-hover">
+                        <div class="w-12 h-12 bg-yellow-600 bg-opacity-20 rounded-full flex items-center justify-center mb-4">
+                            <i class="fas fa-user-secret text-yellow-500"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2">For Members</h3>
+                        <p class="text-gray-400 text-sm">Your digital identity for the most exclusive venues worldwide.</p>
+                    </div>
+                    <div class="bg-gray-900 rounded-lg p-6 card-hover">
+                        <div class="w-12 h-12 bg-yellow-600 bg-opacity-20 rounded-full flex items-center justify-center mb-4">
+                            <i class="fas fa-globe text-yellow-500"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2">Global Network</h3>
+                        <p class="text-gray-400 text-sm">Multi-language, multi-currency, multi-culture infrastructure.</p>
+                    </div>
+                    <div class="bg-gray-900 rounded-lg p-6 card-hover">
+                        <div class="w-12 h-12 bg-yellow-600 bg-opacity-20 rounded-full flex items-center justify-center mb-4">
+                            <i class="fas fa-shield-alt text-yellow-500"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2">Secure</h3>
+                        <p class="text-gray-400 text-sm">GDPR & data sovereignty ready. Your privacy is our priority.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Who Is It For Section -->
+    <section class="py-20 bg-gradient-to-b from-gray-900 to-black">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-5xl font-bold mb-4">
+                    <span class="gold-gradient">Who Is It For?</span>
+                </h2>
+                <div class="w-24 h-1 bg-yellow-600 mx-auto mt-6"></div>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                <div class="bg-black bg-opacity-50 rounded-xl p-8 border border-gray-800">
+                    <div class="flex items-center mb-6">
+                        <div class="w-16 h-16 bg-yellow-600 bg-opacity-20 rounded-full flex items-center justify-center mr-4">
+                            <i class="fas fa-building text-2xl text-yellow-500"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold">For Organizations<br><span class="text-yellow-500">"High Table"</span></h3>
+                    </div>
+                    <ul class="space-y-4">
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-yellow-500 mt-1 mr-3"></i>
+                            <span>Create up to 2 private circles</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-yellow-500 mt-1 mr-3"></i>
+                            <span>Issue 10 digital VIP passes</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-yellow-500 mt-1 mr-3"></i>
+                            <span>Host private events with QR/NFC</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-yellow-500 mt-1 mr-3"></i>
+                            <span>Reward top members & track KPIs</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="bg-black bg-opacity-50 rounded-xl p-8 border border-gray-800">
+                    <div class="flex items-center mb-6">
+                        <div class="w-16 h-16 bg-yellow-600 bg-opacity-20 rounded-full flex items-center justify-center mr-4">
+                            <i class="fas fa-user-secret text-2xl text-yellow-500"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold">For Members<br><span class="text-yellow-500">"Hunters"</span></h3>
+                    </div>
+                    <ul class="space-y-4">
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-yellow-500 mt-1 mr-3"></i>
+                            <span>Claim VIP cards (Bronze → Diamond)</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-yellow-500 mt-1 mr-3"></i>
+                            <span>Join exclusive events</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-yellow-500 mt-1 mr-3"></i>
+                            <span>Earn points, unlock rewards</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-yellow-500 mt-1 mr-3"></i>
+                            <span>Enter without questions</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="py-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-5xl font-bold mb-4">
+                    <span class="gold-gradient">Core Features</span>
+                </h2>
+                <div class="w-24 h-1 bg-yellow-600 mx-auto mt-6"></div>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                <div>
+                    <div class="flex items-start mb-8">
+                        <div class="w-12 h-12 bg-yellow-600 bg-opacity-20 rounded-full flex items-center justify-center mr-6">
+                            <i class="fas fa-lock text-yellow-500"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-2xl font-bold mb-2">For High Table (Organizers)</h3>
+                            <p class="text-gray-400">Powerful tools to manage your exclusive networks</p>
+                        </div>
+                    </div>
+                    
+                    <div class="space-y-6">
+                        <div class="flex items-start">
+                            <div class="w-8 h-8 bg-yellow-600 bg-opacity-20 rounded-full flex items-center justify-center mr-4 mt-1">
+                                <i class="fas fa-circle text-xs text-yellow-500"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-lg font-semibold">Create & manage up to 2 exclusive groups</h4>
+                                <p class="text-gray-400 text-sm">Curate your inner circle with precision and discretion.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="w-8 h-8 bg-yellow-600 bg-opacity-20 rounded-full flex items-center justify-center mr-4 mt-1">
+                                <i class="fas fa-circle text-xs text-yellow-500"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-lg font-semibold">Issue tiered VIP cards instantly</h4>
+                                <p class="text-gray-400 text-sm">From Bronze to Diamond, assign status with a tap.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="w-8 h-8 bg-yellow-600 bg-opacity-20 rounded-full flex items-center justify-center mr-4 mt-1">
+                                <i class="fas fa-circle text-xs text-yellow-500"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-lg font-semibold">Host events & check-in via QR/NFC</h4>
+                                <p class="text-gray-400 text-sm">Seamless entry, no physical tickets needed.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="w-8 h-8 bg-yellow-600 bg-opacity-20 rounded-full flex items-center justify-center mr-4 mt-1">
+                                <i class="fas fa-circle text-xs text-yellow-500"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-lg font-semibold">Push secret offers to selected members</h4>
+                                <p class="text-gray-400 text-sm">Reward loyalty with exclusive, time-sensitive perks.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="w-8 h-8 bg-yellow-600 bg-opacity-20 rounded-full flex items-center justify-center mr-4 mt-1">
+                                <i class="fas fa-circle text-xs text-yellow-500"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-lg font-semibold">Track loyalty metrics & auto-upgrade members</h4>
+                                <p class="text-gray-400 text-sm">Data-driven insights to recognize your most valuable connections.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div>
+                    <div class="flex items-start mb-8">
+                        <div class="w-12 h-12 bg-yellow-600 bg-opacity-20 rounded-full flex items-center justify-center mr-6">
+                            <i class="fas fa-bullseye text-yellow-500"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-2xl font-bold mb-2">For Hunters (Members)</h3>
+                            <p class="text-gray-400">Your key to the world's most exclusive experiences</p>
+                        </div>
+                    </div>
+                    
+                    <div class="space-y-6">
+                        <div class="flex items-start">
+                            <div class="w-8 h-8 bg-yellow-600 bg-opacity-20 rounded-full flex items-center justify-center mr-4 mt-1">
+                                <i class="fas fa-circle text-xs text-yellow-500"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-lg font-semibold">One wallet, many worlds – your MasterVIP ID</h4>
+                                <p class="text-gray-400 text-sm">A single digital identity that opens doors across the globe.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="w-8 h-8 bg-yellow-600 bg-opacity-20 rounded-full flex items-center justify-center mr-4 mt-1">
+                                <i class="fas fa-circle text-xs text-yellow-500"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-lg font-semibold">Scan in. Check in. No physical card needed</h4>
+                                <p class="text-gray-400 text-sm">Discreet, frictionless access to all your privileges.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="w-8 h-8 bg-yellow-600 bg-opacity-20 rounded-full flex items-center justify-center mr-4 mt-1">
+                                <i class="fas fa-circle text-xs text-yellow-500"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-lg font-semibold">Unlock hidden deals and surprise rewards</h4>
+                                <p class="text-gray-400 text-sm">Exclusive benefits that appear when you least expect them.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="w-8 h-8 bg-yellow-600 bg-opacity-20 rounded-full flex items-center justify-center mr-4 mt-1">
+                                <i class="fas fa-circle text-xs text-yellow-500"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-lg font-semibold">Pay with earned points in participating venues</h4>
+                                <p class="text-gray-400 text-sm">Your loyalty translates directly into premium experiences.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="w-8 h-8 bg-yellow-600 bg-opacity-20 rounded-full flex items-center justify-center mr-4 mt-1">
+                                <i class="fas fa-circle text-xs text-yellow-500"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-lg font-semibold">View full event history & journey</h4>
+                                <p class="text-gray-400 text-sm">Track your path through the world's most exclusive spaces.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Global Scale Section -->
+    <section class="py-20 bg-gradient-to-b from-black to-gray-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-5xl font-bold mb-4">
+                    <span class="gold-gradient">Designed to Scale Worldwide</span>
+                </h2>
+                <div class="w-24 h-1 bg-yellow-600 mx-auto mt-6"></div>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-gray-900 bg-opacity-50 rounded-xl p-8 border border-gray-800 text-center">
+                    <div class="w-16 h-16 bg-yellow-600 bg-opacity-20 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-language text-2xl text-yellow-500"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Multi-language</h3>
+                    <p class="text-gray-400">Localized experiences in all major languages with more added continuously.</p>
+                </div>
+                
+                <div class="bg-gray-900 bg-opacity-50 rounded-xl p-8 border border-gray-800 text-center">
+                    <div class="w-16 h-16 bg-yellow-600 bg-opacity-20 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-coins text-2xl text-yellow-500"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Multi-currency</h3>
+                    <p class="text-gray-400">Support for all global currencies with real-time conversion and local pricing.</p>
+                </div>
+                
+                <div class="bg-gray-900 bg-opacity-50 rounded-xl p-8 border border-gray-800 text-center">
+                    <div class="w-16 h-16 bg-yellow-600 bg-opacity-20 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-globe-americas text-2xl text-yellow-500"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Multi-culture</h3>
+                    <p class="text-gray-400">Adapted to local customs, etiquette, and unspoken rules of each market.</p>
+                </div>
+                
+                <div class="bg-gray-900 bg-opacity-50 rounded-xl p-8 border border-gray-800 text-center">
+                    <div class="w-16 h-16 bg-yellow-600 bg-opacity-20 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-wifi text-2xl text-yellow-500"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Works offline</h3>
+                    <p class="text-gray-400">QR/NFC fallback ensures access even in underground or remote locations.</p>
+                </div>
+                
+                <div class="bg-gray-900 bg-opacity-50 rounded-xl p-8 border border-gray-800 text-center">
+                    <div class="w-16 h-16 bg-yellow-600 bg-opacity-20 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-shield-alt text-2xl text-yellow-500"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">GDPR ready</h3>
+                    <p class="text-gray-400">Full compliance with global data protection regulations.</p>
+                </div>
+                
+                <div class="bg-gray-900 bg-opacity-50 rounded-xl p-8 border border-gray-800 text-center">
+                    <div class="w-16 h-16 bg-yellow-600 bg-opacity-20 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-code text-2xl text-yellow-500"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">White-label SDK</h3>
+                    <p class="text-gray-400">Custom implementations for partners who need their own branded solution.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Product Preview Carousel -->
+    <section id="preview" class="py-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-5xl font-bold mb-4">
+                    <span class="gold-gradient">Product Preview</span>
+                </h2>
+                <div class="w-24 h-1 bg-yellow-600 mx-auto mt-6"></div>
+            </div>
+            
+            <div class="relative">
+                <div class="carousel-container overflow-hidden">
+                    <div class="carousel-track flex transition-transform duration-300">
+                        <div class="carousel-item flex-shrink-0 w-full md:w-1/2 lg:w-1/3 px-4">
+                            <div class="bg-gray-900 rounded-xl overflow-hidden h-full">
+                                <div class="h-64 bg-gradient-to-br from-yellow-900 to-black flex items-center justify-center">
+                                    <i class="fas fa-wallet text-6xl text-yellow-500 opacity-50"></i>
+                                </div>
+                                <div class="p-6">
+                                    <h3 class="text-xl font-bold mb-2">VIP Wallet UI</h3>
+                                    <p class="text-gray-400 text-sm">Hunter view showing current tier, access points, and nearby venues.</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="carousel-item flex-shrink-0 w-full md:w-1/2 lg:w-1/3 px-4">
+                            <div class="bg-gray-900 rounded-xl overflow-hidden h-full">
+                                <div class="h-64 bg-gradient-to-br from-yellow-900 to-black flex items-center justify-center">
+                                    <i class="fas fa-chart-line text-6xl text-yellow-500 opacity-50"></i>
+                                </div>
+                                <div class="p-6">
+                                    <h3 class="text-xl font-bold mb-2">Admin Dashboard</h3>
+                                    <p class="text-gray-400 text-sm">High Table view with member analytics and event management.</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="carousel-item flex-shrink-0 w-full md:w-1/2 lg:w-1/3 px-4">
+                            <div class="bg-gray-900 rounded-xl overflow-hidden h-full">
+                                <div class="h-64 bg-gradient-to-br from-yellow-900 to-black flex items-center justify-center">
+                                    <i class="fas fa-qrcode text-6xl text-yellow-500 opacity-50"></i>
+                                </div>
+                                <div class="p-6">
+                                    <h3 class="text-xl font-bold mb-2">Event Check-in</h3>
+                                    <p class="text-gray-400 text-sm">Seamless entry experience with QR code or NFC tap.</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="carousel-item flex-shrink-0 w-full md:w-1/2 lg:w-1/3 px-4">
+                            <div class="bg-gray-900 rounded-xl overflow-hidden h-full">
+                                <div class="h-64 bg-gradient-to-br from-yellow-900 to-black flex items-center justify-center">
+                                    <i class="fas fa-star text-6xl text-yellow-500 opacity-50"></i>
+                                </div>
+                                <div class="p-6">
+                                    <h3 class="text-xl font-bold mb-2">Loyalty Scanner</h3>
+                                    <p class="text-gray-400 text-sm">Venue staff interface for recognizing and rewarding members.</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="carousel-item flex-shrink-0 w-full md:w-1/2 lg:w-1/3 px-4">
+                            <div class="bg-gray-900 rounded-xl overflow-hidden h-full">
+                                <div class="h-64 bg-gradient-to-br from-yellow-900 to-black flex items-center justify-center">
+                                    <i class="fas fa-gift text-6xl text-yellow-500 opacity-50"></i>
+                                </div>
+                                <div class="p-6">
+                                    <h3 class="text-xl font-bold mb-2">Mystery Reward</h3>
+                                    <p class="text-gray-400 text-sm">The thrill of unlocking a surprise benefit at random moments.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <button class="absolute left-0 top-1/2 transform -translate-y-1/2 -translate-x-4 bg-black bg-opacity-50 rounded-full w-10 h-10 flex items-center justify-center text-white hover:bg-yellow-600 transition">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                
+                <button class="absolute right-0 top-1/2 transform -translate-y-1/2 translate-x-4 bg-black bg-opacity-50 rounded-full w-10 h-10 flex items-center justify-center text-white hover:bg-yellow-600 transition">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pilots Section -->
+    <section id="pilots" class="py-20 bg-black">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-5xl font-bold mb-4">
+                    <span class="gold-gradient">Built for Fast Testing – MVP Ready</span>
+                </h2>
+                <p class="text-xl text-gray-300 max-w-3xl mx-auto">Demo or Die. Join the first real-world pilots in:</p>
+                <div class="w-24 h-1 bg-yellow-600 mx-auto mt-6"></div>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+                <div class="bg-gray-900 rounded-xl overflow-hidden border border-gray-800">
+                    <div class="h-48 bg-gradient-to-b from-yellow-900 to-black flex items-center justify-center relative">
+                        <img src="https://images.unsplash.com/photo-1492571350019-22de08371fd3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2053&q=80" alt="Tokyo" class="absolute inset-0 w-full h-full object-cover opacity-30">
+                        <div class="text-5xl font-bold gold-gradient relative">🇯🇵</div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold mb-2">Tokyo</h3>
+                        <p class="text-gray-400 mb-4">Underground club network testing frictionless entry and tiered rewards.</p>
+                        <div class="flex items-center text-sm text-yellow-500">
+                            <i class="fas fa-user-friends mr-2"></i>
+                            <span>12 venues participating</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bg-gray-900 rounded-xl overflow-hidden border border-gray-800">
+                    <div class="h-48 bg-gradient-to-b from-yellow-900 to-black flex items-center justify-center relative">
+                        <img src="https://images.unsplash.com/photo-1585208798174-6cedd86e019a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Lisbon" class="absolute inset-0 w-full h-full object-cover opacity-30">
+                        <div class="text-5xl font-bold gold-gradient relative">🇵🇹</div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold mb-2">Lisbon</h3>
+                        <p class="text-gray-400 mb-4">Startup lounges & retreats using MasterVIP for private networking.</p>
+                        <div class="flex items-center text-sm text-yellow-500">
+                            <i class="fas fa-user-friends mr-2"></i>
+                            <span>8 venues participating</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bg-gray-900 rounded-xl overflow-hidden border border-gray-800">
+                    <div class="h-48 bg-gradient-to-b from-yellow-900 to-black flex items-center justify-center relative">
+                        <img src="https://images.unsplash.com/photo-1563986768609-322da13575f3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Berlin" class="absolute inset-0 w-full h-full object-cover opacity-30">
+                        <div class="text-5xl font-bold gold-gradient relative">🇩🇪</div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold mb-2">Berlin</h3>
+                        <p class="text-gray-400 mb-4">Private techno scene implementing anonymous but verified entry.</p>
+                        <div class="flex items-center text-sm text-yellow-500">
+                            <i class="fas fa-user-friends mr-2"></i>
+                            <span>5 venues participating</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center">
+                <p class="text-lg text-gray-300 mb-8 max-w-3xl mx-auto">
+                    Be among the first to test global privilege infrastructure.
+                </p>
+                
+                <div class="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-6">
+                    <button class="px-8 py-4 text-lg font-bold text-black bg-gradient-to-r from-yellow-500 to-yellow-300 rounded-md hover:from-yellow-400 hover:to-yellow-200 transition transform hover:-translate-y-1">
+                        Join the Hunter Network
+                    </button>
+                    <button class="px-8 py-4 text-lg font-bold text-white bg-transparent border-2 border-yellow-600 rounded-md hover:bg-yellow-600 hover:bg-opacity-20 transition transform hover:-translate-y-1">
+                        Deploy Your Circle
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-12 bg-black border-t border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-12">
+                <div>
+                    <h3 class="text-2xl font-bold gold-gradient mb-4">MasterVIP</h3>
+                    <p class="text-gray-400 text-sm">
+                        Global infrastructure for digital VIP privileges. No cards. No friction. No middlemen.
+                    </p>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold text-white mb-4">Product</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition text-sm">Features</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition text-sm">Pricing</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition text-sm">API</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition text-sm">Integrations</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold text-white mb-4">Resources</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition text-sm">Documentation</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition text-sm">Guides</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition text-sm">Blog</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition text-sm">Support</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold text-white mb-4">Company</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition text-sm">About</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition text-sm">Careers</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition text-sm">Privacy</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition text-sm">Terms</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-500 text-sm mb-4 md:mb-0">
+                    © 2023 MasterVIP. All rights reserved.
+                </p>
+                <div class="flex space-x-6">
+                    <a href="#" class="text-gray-400 hover:text-white transition">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-white transition">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-white transition">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-white transition">
+                        <i class="fab fa-discord"></i>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="mt-8 text-center">
+                <p class="text-xs text-gray-600">
+                    <i class="fas fa-lock mr-1"></i> MasterVIP does not sell your data. We empower trusted circles. Everything else stays in the dark.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Simple carousel functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const track = document.querySelector('.carousel-track');
+            const items = document.querySelectorAll('.carousel-item');
+            const prevBtn = document.querySelector('.carousel-container button:first-of-type');
+            const nextBtn = document.querySelector('.carousel-container button:last-of-type');
+            
+            let currentIndex = 0;
+            const itemWidth = items[0].offsetWidth;
+            const visibleItems = window.innerWidth >= 768 ? (window.innerWidth >= 1024 ? 3 : 2) : 1;
+            
+            function updateCarousel() {
+                track.style.transform = `translateX(-${currentIndex * itemWidth}px)`;
+            }
+            
+            prevBtn.addEventListener('click', function() {
+                if (currentIndex > 0) {
+                    currentIndex--;
+                    updateCarousel();
+                }
+            });
+            
+            nextBtn.addEventListener('click', function() {
+                if (currentIndex < items.length - visibleItems) {
+                    currentIndex++;
+                    updateCarousel();
+                }
+            });
+            
+            // Handle window resize
+            window.addEventListener('resize', function() {
+                const newVisibleItems = window.innerWidth >= 768 ? (window.innerWidth >= 1024 ? 3 : 2) : 1;
+                if (currentIndex > items.length - newVisibleItems) {
+                    currentIndex = Math.max(0, items.length - newVisibleItems);
+                    updateCarousel();
+                }
+            });
+        });
+    </script>
+</body>
+</html>
