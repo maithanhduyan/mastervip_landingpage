@@ -31,17 +31,16 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-      - name: Setup pnpm
-        uses: pnpm/action-setup@v4
+      - name: Setup Bun
+        uses: oven-sh/setup-bun@v1
         with:
-          version: 8 # You can specify your desired pnpm version
-          run_install: false
+          bun-version: latest # Or a specific version
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
           node-version: "20"
-          cache: 'pnpm' # Explicitly use pnpm for caching
-          cache-dependency-path: 'pnpm-lock.yaml' # Path to your pnpm lock file
+          cache: 'bun' # Explicitly use bun for caching
+          cache-dependency-path: 'bun.lockb' # Path to your bun lock file
       - name: Setup Pages
         uses: actions/configure-pages@v5
         with:
@@ -56,25 +55,20 @@ jobs:
           path: |
             .next/cache
           # Generate a new cache whenever packages or source files change.
-          key: ${{ runner.os }}-nextjs-${{ hashFiles('**/pnpm-lock.yaml') }}-${{ hashFiles('**.[jt]s', '**.[jt]sx') }}
+          key: ${{ runner.os }}-nextjs-${{ hashFiles('**/bun.lockb') }}-${{ hashFiles('**.[jt]s', '**.[jt]sx') }}
           # If source files changed but packages didn't, rebuild from a prior cache.
           restore-keys: |
-            ${{ runner.os }}-nextjs-${{ hashFiles('**/pnpm-lock.yaml') }}-
+            ${{ runner.os }}-nextjs-${{ hashFiles('**/bun.lockb') }}-
       - name: Install dependencies
-        run: pnpm install --frozen-lockfile
+        run: bun install --frozen-lockfile
       - name: Build with Next.js
-        run: pnpm next build
+        run: bun run next build
       - name: Export static site
-        run: pnpm next export
+        run: bun run next export
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
           path: ./out
-      - name: Upload pnpm-lock.yaml
-        uses: actions/upload-artifact@v4
-        with:
-          name: pnpm-lock
-          path: pnpm-lock.yaml
 
   # Deployment job
   deploy:
@@ -86,10 +80,6 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-      - name: Download pnpm-lock.yaml
-        uses: actions/download-artifact@v4
-        with:
-          name: pnpm-lock
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
