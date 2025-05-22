@@ -1,0 +1,22 @@
+services:
+  web:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: mastervip-landingpage
+    env_file:
+      - .env
+    restart: unless-stopped
+    networks:
+      - continental
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.mastervip_landingpage.rule=Host(`${DOMAIN_NAME}`)"
+      - "traefik.http.routers.mastervip_landingpage.entrypoints=web,websecure"
+      - "traefik.http.routers.mastervip_landingpage.tls.certresolver=letsencrypt"
+      - "traefik.http.routers.mastervip_landingpage.tls=true"
+      - "traefik.http.services.mastervip_landingpage.loadbalancer.server.port=3000"
+
+networks:
+  continental:
+    external: true
